@@ -1,0 +1,60 @@
+.input {
+  background-color: #212121;
+  width: 220px;
+  height: 14px;
+  padding: 6px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(249, 255, 85);
+  color: #ffffff;
+}
+
+.input:focus {
+  color: rgb(253, 254, 255);
+  background-color: #212121;
+  outline-color: #317fb3;
+  box-shadow: -1px -1px 5px rgb(28, 177, 177);
+  transition: 0.1s;
+  transition-property: box-shadow;
+}
+
+.buttonSearch {
+  background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+  background-size: 800% 400%;
+  padding: 0.25em 1em;
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  animation: gradient 10s infinite cubic-bezier(0.62, 0.28, 0.23, 0.99) both;
+  box-shadow: 2px 2px 2px rgb(249, 255, 85);
+  cursor: pointer;
+}
+
+.buttonSearch:hover {
+  animation: gradient 3s infinite;
+  transform: scale(1.05);
+}
+
+.buttonSearch:active {
+  animation: gradient 3s infinite;
+  transform: scale(0.8);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

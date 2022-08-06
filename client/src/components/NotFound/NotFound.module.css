@@ -1,0 +1,15 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../images/404.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+   margin-top: 200px;
+   margin-right: 35px;
+   width: 90px;
+   cursor: pointer;
+}

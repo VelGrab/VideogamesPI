@@ -1,0 +1,66 @@
+.filtersContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.selectFilter {
+  background-color: rgb(18, 194, 164);
+  height: 25px;
+  box-shadow: 2px 2px 4px rgb(255, 250, 250);
+  margin: 5px;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 2px solid rgb(20, 169, 206);
+  width: 150px;
+}
+
+.selectFilter:focus {
+  border: 1px solid rgb(0, 195, 255);
+  outline-color: #317fb3;
+}
+
+.buttonReset {
+  padding: 0.14em 0.5em;
+  border: 2px solid #17c3b2;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #17c3b2;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgb(255, 250, 250);
+  margin-left: 5px;
+}
+
+.buttonReset::before {
+  content: "";
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #17c3b2;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.buttonReset:hover::before {
+  width: 105%;
+}
+
+.buttonReset:hover {
+  color: rgb(255, 255, 255);
+}
