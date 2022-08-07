@@ -53,3 +53,27 @@
 .linkHome {
   text-decoration: none;
 }
+
+
+@media screen and (max-width: 575px) {
+  .containerNav {
+    width: 100vw;
+  }
+
+  .homeLogo {
+    width: 50px;
+    height: 50px;
+    margin-top: -10px;
+    margin-left: 20px;
+  }
+
+  .buttonCreate {
+    height: 35px;
+    width: 80px;
+    font-size: 10px;
+    text-transform: none;
+    margin-bottom: 21px;
+    color: #fff;
+    font-weight: 700;
+  }
+}

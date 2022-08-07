@@ -190,3 +190,25 @@
   transform: scale(0.95);
   transition: 0.1s;
 }
+
+
+@media screen and (max-width: 575px) {
+  .containerFormInside {
+    width: 80%;
+  }
+
+  .containerTitle {
+    margin-top: 50px;
+  }
+
+  .buttonBack {
+    margin: 10px 0px 0px 5px;
+    height: 30px;
+    width: 65px;
+  }
+
+  .containerForm {
+    background-size: contain;
+  }
+
+}

@@ -54,7 +54,6 @@
   margin-top: 20px;
   padding: 20px;
   font-family: "Roboto";
-  margin-top: 0px;
 }
 
 .containerGpr {
@@ -94,4 +93,47 @@
   transform: translateY(-5px);
   box-shadow: 0 2px 0 -2px #f85959, 0 8px 0 -4px #39a2db,
     0 12px 10px -3px #39a2db;
+}
+
+
+@media screen and (max-width: 575px) {
+  .containerTitle {
+    width: 100vw;
+  }
+
+  .detailTitle {
+    font-size: 1.5rem;
+  }
+
+  .containerImg {
+    width: 340px;
+    height: 331px;
+  }
+
+  .imgDetail {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .containerDescription {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+  }
+  
+  .descriptionText {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+  }
+
+  .containerGpr {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 50%;
+    margin-left: 10px;
+    margin-top: 50px;
+  }
 }

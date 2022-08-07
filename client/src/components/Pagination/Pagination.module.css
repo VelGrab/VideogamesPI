@@ -106,3 +106,18 @@
   color: rgb(255, 255, 255);
   filter: drop-shadow(2px 2px 2px #ffffff);
 }
+
+
+@media screen and (max-width:575px) {
+  .buttonNext, .buttonPrevious {
+    width: 30px;
+  }
+
+  .paginationClick {
+    width: 17px;
+  }
+
+  .active {
+    width: 18px;
+  }
+}

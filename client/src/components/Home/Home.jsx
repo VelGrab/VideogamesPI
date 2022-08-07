@@ -11,6 +11,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import style from "./Home.module.css";
 import LogoHome from "../../images/logoHome.png";
 import CardNotFound from "../CardNotFound/CardNotFound";
+import Footer from '../Footer/Footer'
 
 export default function Home() {
   // declaro el dispatch para las acciones
@@ -92,6 +93,7 @@ export default function Home() {
               <CardNotFound />
             )}
           </div>
+          <Footer />
         </div>
       ) : (
         <Loader />

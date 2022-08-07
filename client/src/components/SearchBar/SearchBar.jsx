@@ -30,7 +30,7 @@ export default function SearchBar({setCurrentPage}) {
   return (
     <div>
       {  loader ? <Loader /> :
-        <div className={style.containerLoader}>
+        <div className={style.containerSearch}>
           <input
             className={style.input}
             onChange={(e) => handleInputChange(e)}

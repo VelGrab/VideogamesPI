@@ -58,3 +58,23 @@
     background-position: 0% 50%;
   }
 }
+
+@media screen and (max-width: 575px) {
+  .containerSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .input {
+    width: 150px;
+    height: 10px;
+  }
+
+  .buttonSearch {
+    padding: 0.1em 0.5em;
+    margin-top: 6px;
+  }
+}
