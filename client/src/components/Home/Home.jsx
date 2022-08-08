@@ -69,13 +69,13 @@ export default function Home() {
           />
           <div className={style.containerCards}>
             {currentGames !== "NotFound" ? (
-              currentGames?.map((e) => {
+              currentGames && currentGames.map((e) => {
                 return (
                   <div key={e.name}>
                     <div>
                       <Link
                         className={style.linkHome}
-                        to={`/videogame/${e}`}
+                        to={`/videogame/${e.id}`}
                       >
                         <VideogameCard
                           name={e.name}
