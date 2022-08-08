@@ -75,7 +75,7 @@ export default function Home() {
                     <div>
                       <Link
                         className={style.linkHome}
-                        to={`/videogame/${e.id}`}
+                        to={`/videogame/${e}`}
                       >
                         <VideogameCard
                           name={e.name}
