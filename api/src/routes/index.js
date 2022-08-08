@@ -4,7 +4,7 @@ const axios = require("axios");
 const { API_KEY } = process.env;
 const { Videogame, Genre } = require("../db");
 const router = Router();
-const { getAllGenres } = require('./Controllers')
+const { getAllGenres } = require('./controllers')
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
 

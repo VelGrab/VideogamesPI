@@ -19,7 +19,7 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const { getAllGenres } = require('../api/src/routes/Controllers')
+const { getAllGenres } = require('./src/routes/controllers')
 getAllGenres()
 
 // Syncing all the models at once.
