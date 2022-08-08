@@ -15,7 +15,7 @@ export const GET_ALL_PLATFORMS = "GET_ALL_PLATFORMS"
 // Con esta action se obtienen todos los videojuegos.
 export const getAllGames = () => {
   return async function (dispatch) {
-    const response = await axios.get(`http://localhost:3001/videogames`);
+    const response = await axios.get(`/videogames`);
     return dispatch({
       type: GET_ALL_GAMES,
       payload: response.data,
@@ -47,7 +47,7 @@ export const orderByName = (payload) => {
 export const searchVideoGames = (name) => {
   return async function(dispatch) {
     try {
-      let response = await axios.get(`http://localhost:3001/videogames?name=` + name)
+      let response = await axios.get(`/videogames?name=` + name)
       return dispatch({
         type: SEARCH_VIDEOGAMES,
         payload: response.data
@@ -67,7 +67,7 @@ export const orderByRating = (payload) => {
 
 export const getAllGenres = () => {
   return async function (dispatch) {
-    const response = await axios.get(`http://localhost:3001/genres`)
+    const response = await axios.get(`/genres`)
     return dispatch({
       type: GET_ALL_GENRES,
       payload: response.data
@@ -77,7 +77,7 @@ export const getAllGenres = () => {
 
 export const getAllPlatforms = () => {
   return async function (dispatch) {
-    const response = await axios.get(`http://localhost:3001/platforms`)
+    const response = await axios.get(`/platforms`)
     return dispatch({
       type: GET_ALL_PLATFORMS,
       payload: response.data
@@ -88,7 +88,7 @@ export const getAllPlatforms = () => {
 export const postVideogames = (payload) => {
   return async function (dispatch) {
   try {
-    const response = await axios.post('http://localhost:3001/videogames', payload)
+    const response = await axios.post('/videogames', payload)
     return response
   } catch (error) {
     console.log(error)
@@ -99,7 +99,7 @@ export const postVideogames = (payload) => {
 export const getDetails = (id) => {
   return async function (dispatch) {
     try {
-      const response = await axios.get(`http://localhost:3001/videogame/${id}`)
+      const response = await axios.get(`/videogame/${id}`)
       return dispatch({
         type: GET_DETAILS,
         payload: response.data
