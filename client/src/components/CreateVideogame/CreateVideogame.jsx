@@ -27,12 +27,6 @@ const validateForm = (input) => {
     errors.description = "La descripcion debe tener al menos 20 caracteres";
   }
 
-  // if (input.genres.length < 1) {
-  //   errors.genres = "Se requiere al menos 1 genero";
-  // } else if (input.genres.length > 2) {
-  //   errors.genres = "No se pueden seleccionar mas de 3 generos";
-  // }
-
   if (!input.rating) {
     errors.rating = "Se requiere un rating del 1 al 5";
   } else if (input.rating < 1 || input.rating > 5) {
@@ -48,10 +42,15 @@ const validateForm = (input) => {
   ) {
     errors.released = "La fecha de lanzamiento debe ser una fecha valida";
   }
+  if (input.image === "") {
+  } else if (
+    !/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#()?&//=]*)/.test(
+      input.image
+    )
+  ) {
+    errors.image = "La imagen debe ser una url valida";
+  }
 
-  // if (input.platforms.length < 1) {
-  //   errors.platforms = "Se requiere al menos 1 plataforma";
-  // }
   return errors;
 };
 
@@ -288,6 +287,7 @@ export default function CreateVideogame() {
               value={input.image}
               name="image"
             ></input>
+            <p className={style.errorText}>{errors.image}</p>
           </div>
           <div>
             <h5 className={style.textForm}>Rating:</h5>

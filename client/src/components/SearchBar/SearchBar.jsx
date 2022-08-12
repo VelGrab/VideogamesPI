@@ -27,11 +27,18 @@ export default function SearchBar({setCurrentPage}) {
     setGameName("");
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleSubmit(e);
+    }
+  }
+
   return (
     <div>
       {  loader ? <Loader /> :
         <div className={style.containerSearch}>
           <input
+            onKeyPress={handleKeyPress}
             className={style.input}
             onChange={(e) => handleInputChange(e)}
             value={gameName}
