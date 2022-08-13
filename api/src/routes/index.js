@@ -147,6 +147,11 @@ router.get("/videogame/:id", async (req, res) => {
 // con esta ruta creo un nuevo videojuego en la base de datos.
 router.post("/videogames", async (req, res) => {
   const { name, description, image, released, rating, platforms, genres, createInDb } = req.body;
+
+  if(!name || !description || !released || !rating || !platforms || !genres) {
+    res.send({message: "¡Missing Data!"})
+  }
+
   try {
     let newVideoGame = await Videogame.create({
       name,
@@ -164,9 +169,10 @@ router.post("/videogames", async (req, res) => {
           genres
       },
     });
-    
+
     newVideoGame.addGenre(genreDb);
-    res.send('Videojuego creado con exito');
+    res.send('Videojuego creado con exito')
+
   } catch (error) {
     console.log(error)
   }
